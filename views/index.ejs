@@ -19,9 +19,72 @@
                     <img src="<%= pokemon.image %>" alt="" class="src" />
                     <h2><%= pokemon.name %></h2>
                     <p class="description"><%= pokemon.description %></p>
-                    <p><%= pokemon.type %></p>
+                    <p>Type: <%= pokemon.type %></p>
+                    <a href="/details/<%= pokemon.id %>">Editar</a>
                 </div>
                 <%})%>
+            </section>
+
+            <section id="register">
+                <% if (pokemon==undefined) { %>
+                <h2>Register a new pokemon!</h2>
+
+                <form action="/add" method="POST">
+                    <label for="nome">Name:</label>
+                    <input type="text" id="nome" name="nome" />
+
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" />
+
+                    <label for="type">Type:</label>
+                    <input type="text" id="type" name="type" />
+
+                    <label for="image" name="image">Image link:</label>
+                    <input type="text" id="image" name="image" />
+
+                    <button id="btnCadastrar" type="submit">Register</button>
+                </form>
+
+                <% } else { %>
+
+                <h2>Update a pokemon!</h2>
+
+                <form action="/update/<%= pokemon.id %>" method="POST">
+                    <label for="nome">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="<%= pokemon.name %>"
+                    />
+
+                    <label for="description">Description:</label>
+                    <input
+                        type="text"
+                        id="description"
+                        name="description"
+                        value="<%= pokemon.description %>"
+                    />
+
+                    <label for="type">Type:</label>
+                    <input
+                        type="text"
+                        id="type"
+                        name="type"
+                        value="<%= pokemon.type %>"
+                    />
+
+                    <label for="image" name="image">Image link:</label>
+                    <input
+                        type="text"
+                        id="image"
+                        name="image"
+                        value="<%= pokemon.image %>"
+                    />
+
+                    <button id="btnAtualizar" type="submit">Update</button>
+                </form>
+                <% } %>
             </section>
         </main>
     </body>

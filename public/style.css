@@ -6,9 +6,9 @@
     font-family: Poppins, Arial, sans-serif;
 }
 
-body {
-    background-image: url("./img/wallpaper.png")
-}
+/* body {
+    background-image: url("./img/wallpaper.png");
+} */
 
 header {
     padding: 3rem;
@@ -29,6 +29,7 @@ section#cards {
     display: flex;
     justify-content: space-evenly;
     margin-top: 5rem;
+    flex-wrap: wrap;
 }
 
 section#cards div.card {
@@ -36,6 +37,8 @@ section#cards div.card {
     box-shadow: 10px 5px 5px #00000015;
     padding: 1rem;
     background-color: white;
+    border-radius: 20px;
+    margin-top: 3rem;
 }
 
 section#cards div.card img {
@@ -44,8 +47,60 @@ section#cards div.card img {
 
 section#cards div.card h2 {
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 section#cards div.card p.description {
     margin-bottom: 1rem;
+}
+
+section#register {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+
+section#register h2 {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+section#register form {
+    width: 50%;
+}
+
+section#register form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 20px;
+    border: solid rgb(187, 187, 187);
+    margin: 0 1rem 1rem 1rem;
+}
+
+section#register form label {
+    margin-bottom: 1rem;
+}
+
+section#register form button {
+    padding: 1rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px red;
+    color: red;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+section#register form button:hover{
+    background-color: red;
+    color: #fff;
 }
