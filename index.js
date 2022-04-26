@@ -15,6 +15,10 @@ const pokedex = [
             "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
         type: "Grass",
         image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+        height: "0.7 m",
+        weight: "6.9 kg",
+        category: "Seed",
+        abilities: "Overgrow"
     },
     {
         id: 2,
@@ -23,6 +27,10 @@ const pokedex = [
             "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
         type: "Fire",
         image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+        height: "0.6 m",
+        weight: "8.5 kg",
+        category: "Lizard",
+        abilities: "Blaze"
     },
     {
         id: 3,
@@ -31,6 +39,10 @@ const pokedex = [
             "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
         type: "Water",
         image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+        height: "0.5 m",
+        weight: "9.0 kg",
+        category: "Tiny Turtle",
+        abilities: "Torrent"
     },
 ];
 
@@ -51,7 +63,7 @@ app.post("/add", (req, res) => {
 app.get("/details/:id", (req, res) => {
     const id = +req.params.id;
     pokemon = pokedex.find((pokemon) => pokemon.id === id);
-    res.redirect("/");
+    res.redirect("/#register");
 });
 
 app.post("/update/:id", (req, res) => {
@@ -60,7 +72,7 @@ app.post("/update/:id", (req, res) => {
     newPokemon.id = id + 1;
     pokedex[id] = newPokemon;
     pokemon = undefined;
-    res.redirect("/");
+    res.redirect("/#cards");
 });
 
 app.listen(3000, () =>
