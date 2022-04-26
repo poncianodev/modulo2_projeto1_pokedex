@@ -16,4 +16,4 @@ Tecnologias Utilizadas:
 <img align="center" alt="Lucas-NODE" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg">
 </div>
 
-&copy; Criado por Lucas Ponciano
+<p> &copy; Criado por Lucas Ponciano </p>
