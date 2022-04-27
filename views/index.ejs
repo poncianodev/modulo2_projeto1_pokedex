@@ -5,142 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" type="text/css" />
-        <title>Projeto Pokedex</title>
+        <link
+            rel="icon"
+            type="imagem/png"
+            href="https://cdn-icons-png.flaticon.com/512/528/528098.png"
+        />
+        <title>Pokedex Project - by Lucas Ponciano</title>
     </head>
     <body>
-        <header>
-
-            <nav>
-                <ul>
-                    <li><img src="/img/logo-pokebola.png" alt="" class="src"></li>
-                    <li><h1><a href="/">Pokedéx</a></h1></li>
-                    <li><a href="#register">Register</a></li>
-                    <li><a href="#cards">Pokemon List</a></li>
-                </ul>
-            </nav>
-        </header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="/img/logo-pokebola.png" alt="" class="src" />
+                </li>
+                <li>
+                    <h1><a href="/">Pokedex</a></h1>
+                </li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/#cards">Details</a></li>
+            </ul>
+        </nav>
 
         <main>
-
-            <section id="register">
-
-                <img src="/img/pokedex.png" alt="Imagem da Pokedex" name="Pokedex">
-
-                <% if (pokemon==undefined) { %>
-                <h2>Register a new pokemon!</h2>
-
-                <form action="/add" method="POST">
-                    <label for="nome">Name:</label>
-                    <input type="text" id="nome" name="nome" required/>
-
-                    <label for="description">Description:</label>
-                    <input type="text" id="description" name="description" required/>
-
-                    <label for="type">Type:</label>
-                    <input type="text" id="type" name="type" required/>
-
-                    <label for="image" name="image">Image link:</label>
-                    <input type="text" id="image" name="image" required/>
-
-                    <label for="height" name="height">Height:</label>
-                    <input type="height" id="height" name="height" required/>
-
-                    <label for="weight" name="weight">Weight:</label>
-                    <input type="weight" id="weight" name="weight" required/>
-
-                    <label for="category" name="category">Category:</label>
-                    <input type="category" id="category" name="imacategoryge" required/>
-
-                    <label for="abilities" name="abilities">Abilities:</label>
-                    <input type="abilities" id="abilities" name="abilities" required/>
-
-                    <button id="btnCadastrar" type="submit">Register</button>
-                </form>
-
-                <% } else { %>
-
-                <h2>Update a pokemon!</h2>
-
-                <form action="/update/<%= pokemon.id %>" method="POST">
-                    <label for="nome">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value="<%= pokemon.name %>"
-                        required
-                    />
-
-                    <label for="description">Description:</label>
-                    <input
-                        type="text"
-                        id="description"
-                        name="description"
-                        value="<%= pokemon.description %>"
-                        required
-                    />
-
-                    <label for="type">Type:</label>
-                    <input
-                        type="text"
-                        id="type"
-                        name="type"
-                        value="<%= pokemon.type %>"
-                        required
-                    />
-
-                    <label for="image" name="image">Image link:</label>
-                    <input
-                        type="text"
-                        id="image"
-                        name="image"
-                        value="<%= pokemon.image %>"
-                        required
-                    />
-
-                    <label for="height" name="height">Height:</label>
-                    <input
-                        type="text"
-                        id="height"
-                        name="height"
-                        value="<%= pokemon.height %>"
-                        required
-                    />
-
-                    <label for="weight" name="weight">Weight:</label>
-                    <input
-                        type="text"
-                        id="weight"
-                        name="weight"
-                        value="<%= pokemon.weight %>"
-                        required
-                    />
-
-                    <label for="category" name="category">Category:</label>
-                    <input
-                        type="text"
-                        id="category"
-                        name="category"
-                        value="<%= pokemon.category %>"
-                        required
-                    />
-
-                    <label for="abilities" name="abilities">Abilities:</label>
-                    <input
-                        type="text"
-                        id="abilities"
-                        name="abilities"
-                        value="<%= pokemon.abilities %>"
-                        required
-                    />
-
-                    <button id="btnAtualizar" type="submit">Update</button>
-                </form>
-                <% } %>
-            </section>
-
             <section id="cards">
-
                 <h2>Pokemon List</h2>
 
                 <% pokedex.forEach((pokemon) => { %>
@@ -153,16 +40,26 @@
                     <p>Weight: <%= pokemon.weight %></p>
                     <p>Category: <%= pokemon.category %></p>
                     <p>Abilities: <%= pokemon.abilities %></p>
-                    <a href="/details/<%= pokemon.id %>">Editar</a>
-                    
                 </div>
                 <%})%>
             </section>
         </main>
 
         <footer>
-            <p>&copy; Criado por Lucas Ponciano  <a href="https://github.com/poncianodev" target="_blank">Github</a></p>
-            <p>Projeto do Módulo 2 da <a href="https://blueedtech.com.br/" target="_blank">Blue EdTech</a> </p>
+            <p>
+                &copy; Created by
+                <a href="https://github.com/poncianodev" target="_blank"
+                    >Lucas Ponciano</a
+                >
+            </p>
+            <p>
+                Project presented in Module 2 of the
+                <a href="https://blueedtech.com.br/" target="_blank"
+                    >Blue EdTech</a
+                >
+            </p>
         </footer>
     </body>
+
+    <script src="../public/script.js"></script>
 </html>

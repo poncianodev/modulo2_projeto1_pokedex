@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-image: url("/img/wallpaper.jpg");
+}
+
 nav {
     background-color: #de0a2b;
     position: fixed;
@@ -51,7 +55,6 @@ main {
 section#cards {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 5rem;
     flex-wrap: wrap;
 }
 
@@ -67,6 +70,8 @@ section#cards div.card {
 section#cards h2 {
     width: 100%;
     text-align: center;
+    margin-top: 10rem;
+    font-size: 2.5rem;
 }
 
 section#cards div.card img {
@@ -79,7 +84,7 @@ section#cards div.card h3 {
 }
 
 section#cards div.card p.description {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 section#register {
@@ -136,28 +141,6 @@ section#register form button {
 
 section#register form button:hover {
     background-color: red;
-    color: #fff;
-}
-
-section#cards div.card a {
-    padding: 1rem;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    font-size: 1rem;
-    background-color: #fff;
-    border: solid 1px blue;
-    color: blue;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    margin-top: 1rem;
-}
-
-section#cards div.card a:hover {
-    background-color: blue;
     color: #fff;
 }
 

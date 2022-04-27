@@ -21,7 +21,7 @@ const pokedex = [
         height: "0.7 m",
         weight: "6.9 kg",
         category: "Seed",
-        abilities: "Overgrow"
+        abilities: "Overgrow",
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const pokedex = [
         height: "0.6 m",
         weight: "8.5 kg",
         category: "Lizard",
-        abilities: "Blaze"
+        abilities: "Blaze",
     },
     {
         id: 3,
@@ -45,7 +45,7 @@ const pokedex = [
         height: "0.5 m",
         weight: "9.0 kg",
         category: "Tiny Turtle",
-        abilities: "Torrent"
+        abilities: "Torrent",
     },
 ];
 
@@ -63,21 +63,16 @@ app.post("/add", (req, res) => {
     res.redirect("/");
 });
 
+app.get("/register", (req, res) => {
+    res.render("register.ejs", { pokemon });
+});
+
 app.get("/details/:id", (req, res) => {
     const id = +req.params.id;
-    pokemon = pokedex.find((pokemon) => pokemon.id === id);
+    pokemon = pokedex.find(pokemon => pokemon.id === id);
     res.redirect("/#register");
 });
 
-app.post("/update/:id", (req, res) => {
-    const id = +req.params.id - 1;
-    const newPokemon = req.body;
-    newPokemon.id = id + 1;
-    pokedex[id] = newPokemon;
-    pokemon = undefined;
-    res.redirect("/#cards");
-});
-
 app.listen(port, () =>
-    console.log(`Servidor rodando em http://localhost:${port}`)
+    console.log(`Servidor rodando em http://localhost:${port}`),
 );

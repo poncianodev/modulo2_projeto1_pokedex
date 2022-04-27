@@ -1,26 +1,27 @@
 {
-  "name": "modulo2_projeto2_pokedex",
-  "version": "1.0.0",
-  "description": "Projeto 2 Pokedex - Modulo 2",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm index.js",
-    "dev": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/poncianodev/modulo2_projeto2_pokedex.git"
-  },
-  "author": "Lucas Ponciano",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/poncianodev/modulo2_projeto2_pokedex/issues"
-  },
-  "homepage": "https://github.com/poncianodev/modulo2_projeto2_pokedex#readme",
-  "dependencies": {
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.7",
-    "express": "^4.17.3",
-    "nodemon": "^2.0.15"
-  }
+    "name": "modulo2_projeto2_pokedex",
+    "version": "1.0.0",
+    "description": "Projeto 2 Pokedex - Modulo 2",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/poncianodev/modulo2_projeto2_pokedex.git"
+    },
+    "author": "Lucas Ponciano",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/poncianodev/modulo2_projeto2_pokedex/issues"
+    },
+    "homepage": "https://github.com/poncianodev/modulo2_projeto2_pokedex#readme",
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "dotenv": "^16.0.0",
+        "ejs": "^3.1.7",
+        "express": "^4.17.3",
+        "nodemon": "^2.0.15"
+    }
 }
