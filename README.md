@@ -10,7 +10,7 @@ In this project we made a Pokedex, where we have some pokemons already registere
 
 ---
 
-Tecnologias Utilizadas (Technologies Used):
+## Tecnologias Utilizadas (Technologies Used):
 
 <div style="display: flex">
 <img align="center" alt="Lucas-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -19,9 +19,12 @@ Tecnologias Utilizadas (Technologies Used):
 <img align="center" alt="Lucas-NODE" height="30" width="40" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg">
 </div>
 
-Thanks for your Visiting!
+---
 
-<img src="https://c.tenor.com/tZVpbfTIjNMAAAAC/pikachu.gif" style="width: { 1rem }">;
+### Thanks for your Visiting!
+
+
+<img src="https://c.tenor.com/tZVpbfTIjNMAAAAC/pikachu.gif" width="200px">
 
 <br>
 <p> &copy; Developed by <a href="http://https://www.linkedin.com/in/lucas-ponciano/">Lucas Ponciano</a></p>
